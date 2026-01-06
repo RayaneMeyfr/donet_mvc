@@ -1,0 +1,26 @@
+﻿@model Contact
+<h1>Ajouter un contact</h1>
+
+<form method="post" action="Create">
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.MobileNumber)
+        @Html.TextBoxFor(m => m.MobileNumber)
+        @Html.ValidationMessageFor(m => m.MobileNumber)
+    </div>
+
+    <button type="submit">Envoyer</button>
+</form>
+
+@Html.ValidationSummary()

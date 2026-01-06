@@ -1,0 +1,23 @@
+﻿@using Exercice1.Models
+
+@{
+    Contact contact = ViewData["contact"] as Contact;
+}
+
+<h1>Détail du contact</h1>
+
+@if (contact != null)
+{
+    <ul>
+        <li>Nom : @contact.Name</li>
+        <li>Prénom : @contact.FirstName</li>
+        <li>Numéro de téléphone : @contact.MobileNumber</li>
+        <a href="/Contact/ListContacts">
+            <li>Retour</li>
+        </a>
+    </ul>
+}
+else
+{
+    <p>Contact introuvable.</p>
+}

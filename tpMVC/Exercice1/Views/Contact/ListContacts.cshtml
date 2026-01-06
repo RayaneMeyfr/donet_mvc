@@ -1,0 +1,23 @@
+﻿@model List<Exercice1.Models.Contact>
+
+<h1>Contacts</h1>
+<hr />
+<ul>
+
+@foreach(Contact contact in Model)
+{
+    <li>
+        Nom : @contact.Name
+    </li>
+
+     <li>
+        Prenom : @contact.FirstName
+    </li>
+
+    <a href="/Contact/Details/@contact.Id"><li>Voir plus</li></a> 
+    
+    <hr />
+}
+</ul>
+
+<p><a href="/Contact/Create">Ajouter un nouveau contact</a></p>
