@@ -1,0 +1,16 @@
+﻿@model List<Exercice4.Models.Product>
+
+<hr />
+<ul>
+@foreach(Product product in Model)
+{
+    <li>Name : @product.Name</li>    
+    <li>Categorie : @product.Category</li>
+    <li><a href="/Product/Details/@product.Id">Voir plus</a></li>
+
+    <hr />
+}
+</ul>
+
+
+<p><a href="/Product/CreateRandom">Créer un produit aléatoire</a></p>
